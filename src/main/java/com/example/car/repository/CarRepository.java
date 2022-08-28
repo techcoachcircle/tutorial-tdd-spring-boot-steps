@@ -1,11 +1,8 @@
 package com.example.car.repository;
 
 import com.example.car.model.Car;
+import org.springframework.data.repository.CrudRepository;
 
-import java.util.List;
+public interface CarRepository extends CrudRepository<Car,Long> {
 
-public class CarRepository {
-    public List<Car> getAll() {
-        return null;
-    }
 }

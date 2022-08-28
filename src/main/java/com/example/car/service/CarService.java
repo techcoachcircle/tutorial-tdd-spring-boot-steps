@@ -2,6 +2,7 @@ package com.example.car.service;
 
 import com.example.car.model.Car;
 import com.example.car.repository.CarRepository;
+import org.apache.commons.collections.IteratorUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -16,6 +17,6 @@ public class CarService {
     }
 
     public List<Car> getCars() {
-        return carRepository.getAll();
+        return IteratorUtils.toList(carRepository.findAll().iterator());
     }
 }

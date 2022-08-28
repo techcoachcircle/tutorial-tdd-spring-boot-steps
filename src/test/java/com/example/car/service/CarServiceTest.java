@@ -24,7 +24,7 @@ public class CarServiceTest {
         List<Car> cars = new ArrayList<>();
         cars.add(new Car(1L, "prius", "hybrid"));
         cars.add(new Car(2L, "tesla", "electric"));
-        given(carRepository.getAll()).willReturn(cars);
+        given(carRepository.findAll()).willReturn(cars);
 
         CarService carService = new CarService(carRepository);
         List<Car> car = carService.getCars();
