@@ -4,9 +4,12 @@ import com.example.car.model.Car;
 import com.example.car.repository.CarRepository;
 import org.apache.commons.collections.IteratorUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
+@Service
 public class CarService {
 
     @Autowired
