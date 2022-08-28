@@ -21,6 +21,11 @@ public class Car {
 
     }
 
+    public Car(String name, String type) {
+        this.name = name;
+        this.type = type;
+    }
+
     public void setId(Long id){
         this.id = id;
     }
