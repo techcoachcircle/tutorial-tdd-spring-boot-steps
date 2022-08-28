@@ -2,7 +2,7 @@
 
 Inspired and adapted from https://github.com/mbhave/tdd-with-spring-boot/blob/master/non-reactive/pom.xml.
 
-👉 Step 1 - [Write a failing Contract Test](https://github.com/techcoachcircle/tutorial-tdd-spring-boot-steps/commits/main#:~:text=1_failing_contract_test)
+👉 Step 1 - [Write a failing Contract Test](https://github.com/techcoachcircle/tutorial-tdd-spring-boot-steps/commit/945f059c4690a17056add3f7ff84b31d89f766e1)
 
 👉 Step 2 - [Failing Controller Test](https://github.com/techcoachcircle/tutorial-tdd-spring-boot-steps/commit/c57a0c81b097d22aea6d2c28ab4399f846b51b87)
 
