@@ -1,10 +1,13 @@
 package com.example.car.repository;
 
 import com.example.car.model.Car;
+import org.apache.commons.collections.IteratorUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+
+import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -32,5 +35,29 @@ public class CarRepositoryTest {
     public void shouldAutoGenerateId()  {
         Car persistedCar = testEntityManager.persistFlushFind(new Car("prius", "hybrid"));
         assertThat(persistedCar.getId()).isNotNull();
+    }
+
+    @Test
+    public void shouldReturnAllCarsWhenFindAll(){
+        //arrange
+        Car persistedCar1 = testEntityManager.persistFlushFind(new Car("prius", "hybrid"));
+        Car persistedCar2 = testEntityManager.persistFlushFind(new Car("tesla", "electric"));
+
+        //act
+        Iterable<Car> returnedCars = repository.findAll();
+
+        //assert
+        List<Car> returnedCarList = IteratorUtils.toList(returnedCars.iterator());
+        Car firstReturnedCar = returnedCarList.get(0);
+        assertThat(firstReturnedCar.getId()).isNotNull();
+        assertThat(firstReturnedCar.getId()).isEqualTo(persistedCar1.getId());
+        assertThat(firstReturnedCar.getName()).isEqualTo(persistedCar1.getName());
+        assertThat(firstReturnedCar.getType()).isEqualTo(persistedCar1.getType());
+
+        Car secondReturnedCar = returnedCarList.get(1);
+        assertThat(secondReturnedCar.getId()).isNotNull();
+        assertThat(secondReturnedCar.getId()).isEqualTo(persistedCar2.getId());
+        assertThat(secondReturnedCar.getName()).isEqualTo(persistedCar2.getName());
+        assertThat(secondReturnedCar.getType()).isEqualTo(persistedCar2.getType());
     }
 }
