@@ -27,5 +27,8 @@ Index: 🔴 = Failing |  ✅ = Passing
 | Step 9: Passing repository's test for findAll but still failing contract test | [Link](https://github.com/techcoachcircle/tutorial-tdd-spring-boot-steps/commit/74ac9e1525926ca474d8bf801cb84ebc4888b250) | 🔴            | ✅                  | ✅        | ✅             |
 | Step 10: Passing the contract test (Finally)                                  | [Link](https://github.com/techcoachcircle/tutorial-tdd-spring-boot-steps/commit/5e4190fa2feca6ab5f6a22a9f9a9b26118f95b56) | ✅            | ✅                  | ✅        | ✅             |
 
+## What is TDD? (If you dont know)
+[Here](https://www.youtube.com/watch?v=BSaAMQVq01E&t=5811s) is a crisp video (short and very high level) by Bob Martin that explains what is TDD
+
 # Credits
 Inspired and adapted from https://github.com/mbhave/tdd-with-spring-boot/blob/master/non-reactive/pom.xml.
