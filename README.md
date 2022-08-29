@@ -1,5 +1,12 @@
 # Step by Step Tutorial - TDD for Spring-Boot with Junit 5
 
+## Table of Contents
+1. What is this repository for?
+2. How to use this repository?
+3. Step-by-step approach to develop a Microservice
+4. What is TDD (if you dont know already)
+5. Credits
+
 ## What is this repository for?
 This repository is a collection of _copy-pasteable_ templates that you can use for test-driving Spring Boot Microservices.
 
